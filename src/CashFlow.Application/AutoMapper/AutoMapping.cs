@@ -9,7 +9,7 @@ public class AutoMapping : Profile
     public AutoMapping()
     {
         RequestToEntity();
-        EntityToRequest();
+        EntityToResponse();
     }
 
     private void RequestToEntity()
@@ -17,7 +17,7 @@ public class AutoMapping : Profile
         CreateMap<RequestExpenseJson, Expense>();
     }
     
-    private void EntityToRequest()
+    private void EntityToResponse()
     {
         CreateMap<Expense, ResponseRegisteredExpenseJson>();
         CreateMap<Expense, ResponseShortExpenseJson>();
